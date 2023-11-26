@@ -1,2 +1,3 @@
-# TRILHA-ON-CODE-TECH-LINX
-Trilha On Code Tech da plataforma Linx Academy - Fornecido pela Empresa Linx
+# Trilha On Code Tech - Linx Academy
+
+- HTML e CSS: Desenvolvimento web básico
