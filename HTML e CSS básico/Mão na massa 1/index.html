@@ -16,6 +16,11 @@
         </p>
 
         <p>
+            <label>Senha:</label>
+            <input type="password" pattern=".{6,}" title="Insira no mínimo 6 caracteres">
+        </p>
+
+        <p>
             <label for="email">E-mail *</label>
             <input type="email" name="email" placeholder="Digite seu email" required />
         </p>
@@ -44,21 +49,28 @@
             <input type="range" name="skillLevel" min="0" max="10" step="1" />
         </p>
 
-        <p>Qual das tecnologias abaixo, você tem mais conhecimento?</p>
-        <div>
-            <label for="html">
-                <input type="radio" name="best-user-tech" id="html" value="html" />
-                HTML
-            </label>
-            <label for="css">
-                <input type="radio" name="best-user-tech" id="css" value="css" />
-                CSS
-            </label>
-            <label for="javascript">
-                <input type="radio" name="best-user-tech" id="javascript" value="javascript" />
-                JavaScript
-            </label>
-        </div>
+        <fieldset>
+            <legenda>Qual das tecnologias abaixo, você tem mais conhecimento?</legenda>
+            <div>
+                <label for="html">
+                    <input type="radio" name="best-user-tech" id="html" value="html" />
+                    HTML
+                </label>
+                <label for="css">
+                    <input type="radio" name="best-user-tech" id="css" value="css" />
+                    CSS
+                </label>
+                <label for="javascript">
+                    <input type="radio" name="best-user-tech" id="javascript" value="javascript" />
+                    JavaScript
+                </label>
+            </div>
+        </fieldset>
+
+        <p>
+            <label for="arquivo">Adicione um arquivo pdf para teste aqui</label>
+            <input type="file" name="arquivo" id="arquivo" accept="application/pdf">
+        </p>
 
         <p>
             <label for="terms-input">
