@@ -1,3 +1,5 @@
-# Trilha On Code Tech - Linx Academy
+# Trilha On Code Tech - Linx Academy parceiro Conquer Plus
 
-- HTML e CSS: Desenvolvimento web básico
+- HTML e CSS: Desenvolvimento web básico;
+
+- Javascript
