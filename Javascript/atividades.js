@@ -69,7 +69,42 @@ function attBreakContinue() {
     }
 }
 
+function attArrays() {
+    const array = ['Lógica de Programação', 'HTML', 'CSS', 'JavaScript', 'Git', 'Algoritmos', 'Dados'];
+
+    //adiciona ao final do array
+    array.push('Cloud');
+    console.log(array);
+
+    //adiciona no início do array
+    array.unshift('Sistemas');
+    console.log(array);
+
+    //remove o último item do array
+    array.pop();
+    console.log(array);
+
+    //remove o primeiro item do array
+    array.shift();
+    console.log(array);
+
+    //tamanho do array
+    console.log(array.length);
+
+    //item do array através do índice
+    console.log(array[6]);
+
+    //Alterar algum item do array
+    array[0] = 'Software';
+    console.log(array);
+
+    //Ordenando array
+    array.sort();
+    console.log(array);
+}
+
 attNumbersForOf();
 attNotasBimestre();
 attYearsDoWhile();
 attBreakContinue();
+attArrays();
