@@ -103,8 +103,31 @@ function attArrays() {
     console.log(array);
 }
 
+// Conversão Celsius para Fahrenheit
+function attCelsiusToFahrenheit(celsius) {
+    return celsius * 1.8 + 32;
+}
+
+// Imprimindo maior número de um array de números
+function attSpreadOperator(){
+    const arr = [1, 3, 54, 23, 89, 8, 7, 0, 2, 44, 12, 11];
+    console.log(Math.max(...arr));
+}
+
+//Função Anônima
+function attAnonima() {
+    const iara = function (peso, altura) {
+      return peso / (altura * altura);
+    }
+    
+    console.log(iara(59, 1.61));
+}
+
 attNumbersForOf();
 attNotasBimestre();
 attYearsDoWhile();
 attBreakContinue();
 attArrays();
+attCelsiusToFahrenheit(37);
+attSpreadOperator();
+attAnonima();
