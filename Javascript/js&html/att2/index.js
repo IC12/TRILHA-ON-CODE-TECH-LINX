@@ -1,5 +1,5 @@
 const body = document.querySelector("body")
-const list = document.querySelector("url")
+const list = document.querySelector("ul")
 
 const inputValue = document.createElement("input")
 inputValue.setAttribute("type", "text")
@@ -14,7 +14,7 @@ const removeButton = document.createElement("button")
 removeButton.innerHTML = "Remover"
 
 removeButton.addEventListener("click", () => {
-    list.removeChild(list.lastElementChild)
+    if (list.lastElementChild) list.removeChild(list.lastElementChild)
 })
 
 const addButton = document.createElement("button")
@@ -49,3 +49,19 @@ body.appendChild(inputValue)
 body.appendChild(addButton)
 body.appendChild(countButton)
 body.appendChild(removeButton)
+
+function replaceChildWith() {
+    let btn = document.createElement('button');
+    btn.innerText = 'Repor Item Lista';
+    body.appendChild(btn);
+
+    const li0 = document.createElement('li');
+    li0.innerText = 'Estudos';
+
+    btn.addEventListener('click', function(e) {
+        //ul.replaceWith(li0); esse método substitui toda a lista
+        list.replaceChild(li0, list.children[0]);
+    })
+}
+
+replaceChildWith();
