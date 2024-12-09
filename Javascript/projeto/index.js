@@ -1,3 +1,46 @@
+const tableOfSubmitedUsers = document
+    .getElementById("users")
+    .getElementsByTagName("tbody")[0]
+
+function handleExcludeUser(event) {
+    tableOfSubmitedUsers.deleteRow(
+        event.target.parentNode.parentNode.rowIndex - 1
+    )
+}
+
+document.getElementById("isAdmin").addEventListener("change", (event) => {
+    if (event.target.checked)
+        document.getElementById("users-table-wrapper").style["display"] = "block"
+    else
+        document.getElementById("users-table-wrapper").style["display"] = "none"
+})
+
+function insertUserInTable(nome, email, telefone, vaga) {
+    const row = tableOfSubmitedUsers.insertRow()
+
+    const excludeButton = document.createElement("button")
+    excludeButton.innerHTML = "Excluir"
+    excludeButton.type = "button"
+    excludeButton.className = "btn btn-danger"
+    excludeButton.onclick = handleExcludeUser
+
+    const countCell = row.insertCell(0)
+    const nameCell = row.insertCell(1)
+    const emailCell = row.insertCell(2)
+    const phoneCell = row.insertCell(3)
+    const jobCell = row.insertCell(4)
+    const actionCell = row.insertCell(5)
+
+    countCell.appendChild(
+        document.createTextNode(tableOfSubmitedUsers.rows.length)
+    )
+    nameCell.appendChild(document.createTextNode(nome))
+    emailCell.appendChild(document.createTextNode(email))
+    phoneCell.appendChild(document.createTextNode(telefone))
+    jobCell.appendChild(document.createTextNode(vaga))
+    actionCell.appendChild(excludeButton)
+}
+
 const form = document.getElementById("form")
 
 form.addEventListener("submit", (event) => {
@@ -16,6 +59,13 @@ form.addEventListener("submit", (event) => {
     })
 
     alert("Dados enviados com sucesso!")
+
+    insertUserInTable(
+        form.nome.value,
+        form.email.value,
+        form.telefone.value,
+        form.vaga.value
+    )
 
     form.nome.value = ""
     form.email.value = ""
